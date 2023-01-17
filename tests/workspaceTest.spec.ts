@@ -6,7 +6,6 @@ test('test', async ({ page }) => {
  await page.goto('https://app.oslash.com/login/install?platform=Chrome');
  await page.goto('https://app.oslash.com/org?platform=Chrome');
  await page.goto('https://app.oslash.com/shortcuts/all');
- await page.locator('[id="headlessui-menu-button-\\:r3\\:"]').click();
  await page.getByRole('menuitem', { name: 'View profile' }).click();
  await page.getByPlaceholder('Your display name').click();
  await page.getByText('Upload your photo').click();
