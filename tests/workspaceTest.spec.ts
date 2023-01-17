@@ -19,4 +19,8 @@ test('test', async ({ page }) => {
   await page.getByPlaceholder('Your display name').click();
   await page.getByRole('button', { name: 'Save' }).click();
   await page.getByText('Profile updated successfully').click();
+  await page.getByRole('link', { name: 'Settings & Members' }).click();
+  await page.getByLabel('Set Workspace Icon').setInputFiles('jedi.jpeg');
+  await page.locator('button[name="save"]').click();
+  await page.getByRole('button', { name: 'Save' }).click();
 });
